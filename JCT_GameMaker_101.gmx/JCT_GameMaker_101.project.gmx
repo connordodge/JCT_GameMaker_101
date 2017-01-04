@@ -99,6 +99,9 @@
       </objects>
     </objects>
   </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_flat</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
