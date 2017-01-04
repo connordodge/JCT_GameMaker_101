@@ -55,6 +55,50 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <objects name="objects">
+    <objects name="Player">
+      <object>objects\obj_player</object>
+    </objects>
+    <objects name="Enemies">
+      <objects name="Spider">
+        <object>objects\obj_spider</object>
+      </objects>
+      <objects name="Bat">
+        <object>objects\obj_bat</object>
+      </objects>
+    </objects>
+    <objects name="Terrain">
+      <objects name="Grassy Ground">
+        <object>objects\obj_grassyground_top</object>
+        <object>objects\obj_grassyground_middle</object>
+      </objects>
+      <objects name="Inside Castle">
+        <object>objects\obj_castle_top</object>
+        <object>objects\obj_castle_middle</object>
+      </objects>
+    </objects>
+    <objects name="Hazards">
+      <objects name="Lava">
+        <object>objects\obj_lava_top</object>
+        <object>objects\obj_lava_middle</object>
+      </objects>
+    </objects>
+    <objects name="Buildings">
+      <objects name="Castle">
+        <object>objects\obj_castle_wall</object>
+        <object>objects\obj_castle_door_top</object>
+        <object>objects\obj_castle_door_middle</object>
+      </objects>
+    </objects>
+    <objects name="Placeable Objects">
+      <objects name="Torch">
+        <object>objects\obj_torch_burn</object>
+      </objects>
+      <objects name="Moving Platform">
+        <object>objects\obj_moving_platform</object>
+      </objects>
+    </objects>
+  </objects>
   <help>
     <rtf>help.rtf</rtf>
   </help>
