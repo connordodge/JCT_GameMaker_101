@@ -11,6 +11,47 @@
       <sprite>sprites\spr_player_walk</sprite>
       <sprite>sprites\spr_player_jump</sprite>
     </sprites>
+    <sprites name="Enemies">
+      <sprites name="Spider">
+        <sprite>sprites\spr_spider_idle</sprite>
+        <sprite>sprites\spr_spider_walk</sprite>
+      </sprites>
+      <sprites name="Bat">
+        <sprite>sprites\spr_bat_idle</sprite>
+        <sprite>sprites\spr_bat_chase</sprite>
+      </sprites>
+    </sprites>
+    <sprites name="Terrain">
+      <sprites name="Grassy Ground">
+        <sprite>sprites\spr_grassyground_top</sprite>
+        <sprite>sprites\spr_grassyground_middle</sprite>
+      </sprites>
+      <sprites name="Inside Castle">
+        <sprite>sprites\spr_castle_top</sprite>
+        <sprite>sprites\spr_castle_middle</sprite>
+      </sprites>
+    </sprites>
+    <sprites name="Hazards">
+      <sprites name="Lava">
+        <sprite>sprites\spr_lava_top</sprite>
+        <sprite>sprites\spr_lava_middle</sprite>
+      </sprites>
+    </sprites>
+    <sprites name="Buildings">
+      <sprites name="Castle">
+        <sprite>sprites\spr_castle_wall</sprite>
+        <sprite>sprites\spr_castle_door_top</sprite>
+        <sprite>sprites\spr_castle_door_middle</sprite>
+      </sprites>
+    </sprites>
+    <sprites name="Placeable Objects">
+      <sprites name="Torch">
+        <sprite>sprites\spr_torch_burn</sprite>
+      </sprites>
+      <sprites name="Moving Platform">
+        <sprite>sprites\spr_moving_platform</sprite>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
