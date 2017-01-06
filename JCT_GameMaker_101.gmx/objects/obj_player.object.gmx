@@ -27,7 +27,10 @@
             <kind>1</kind>
             <string>///Initialize the Player
 hspd = 0;
+vspd = 0;
 spd = 10;
+
+grav = 3;
 </string>
           </argument>
         </arguments>
@@ -58,8 +61,14 @@ left = -keyboard_check(vk_left);
 p_direction = left + right;
 hspd = p_direction * spd;
 
+//Switch Player direction
 if(hspd != 0){
     image_xscale = sign(hspd);
+}
+
+//Apply Gravity
+if(vspd &lt; 30){
+    vspd += grav;
 }
 
 //Horizontal Collision
@@ -70,7 +79,16 @@ if(place_meeting(x+hspd,y,obj_solid)){
     hspd = 0;
 }
 
+//Vertical Collision
+if(place_meeting(x,y+vspd,obj_solid)){
+    while(!place_meeting(x,y+sign(vspd),obj_solid)){
+        y += sign(vspd);
+    }
+    vspd = 0;
+}
+
 x += hspd;
+y += vspd
 </string>
           </argument>
         </arguments>
