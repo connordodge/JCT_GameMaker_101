@@ -100,10 +100,12 @@
     </objects>
     <objects name="Parents">
       <object>objects\obj_solid</object>
+      <object>objects\obj_goal</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_flat</room>
+    <room>rooms\rm_steps_down</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
