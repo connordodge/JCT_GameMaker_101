@@ -29,6 +29,7 @@
 hspd = 0;
 vspd = 0;
 spd = 10;
+pjump = 35;
 
 grav = 3;
 </string>
@@ -57,6 +58,7 @@ grav = 3;
 
 right = keyboard_check(vk_right);
 left = -keyboard_check(vk_left);
+up = keyboard_check(vk_up);
 
 p_direction = left + right;
 hspd = p_direction * spd;
@@ -69,6 +71,10 @@ if(hspd != 0){
 //Apply Gravity
 if(vspd &lt; 30){
     vspd += grav;
+}
+
+if(up){
+    vspd = -pjump;
 }
 
 //Horizontal Collision
