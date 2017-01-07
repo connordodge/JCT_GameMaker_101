@@ -73,8 +73,21 @@ if(vspd &lt; 30){
     vspd += grav;
 }
 
-if(up){
-    vspd = -pjump;
+//Animate the Character
+if (place_meeting(x, y+4, obj_solid)){
+    if(hspd != 0){
+        sprite_index = spr_player_walk;
+        image_speed = .5;
+    } else {
+        sprite_index = spr_player_idle;
+        image_speed = 0;
+    }
+    if(up){
+        vspd = -pjump;
+    }
+} else{
+    sprite_index = spr_player_jump;
+    image_speed = 0;
 }
 
 //Horizontal Collision
