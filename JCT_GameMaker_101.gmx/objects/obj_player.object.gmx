@@ -58,7 +58,7 @@ grav = 3;
 
 right = keyboard_check(vk_right);
 left = -keyboard_check(vk_left);
-up = keyboard_check(vk_up);
+up = keyboard_check_pressed(vk_up);
 
 p_direction = left + right;
 hspd = p_direction * spd;
@@ -73,8 +73,21 @@ if(vspd &lt; 30){
     vspd += grav;
 }
 
-if(up){
-    vspd = -pjump;
+//Animate the Character
+if (place_meeting(x, y+4, obj_solid)){
+    if(hspd != 0){
+        sprite_index = spr_player_walk;
+        image_speed = .5;
+    } else {
+        sprite_index = spr_player_idle;
+        image_speed = 0;
+    }
+    if(up){
+        vspd = -pjump;
+    }
+} else{
+    sprite_index = spr_player_jump;
+    image_speed = 0;
 }
 
 //Horizontal Collision
