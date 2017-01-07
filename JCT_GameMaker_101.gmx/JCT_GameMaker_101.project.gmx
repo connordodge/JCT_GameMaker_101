@@ -106,6 +106,7 @@
   <rooms name="rooms">
     <room>rooms\rm_flat</room>
     <room>rooms\rm_steps_down</room>
+    <room>rooms\rm_spider</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
