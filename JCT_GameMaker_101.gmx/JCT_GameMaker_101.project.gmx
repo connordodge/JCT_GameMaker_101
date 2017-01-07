@@ -108,6 +108,7 @@
     <room>rooms\rm_flat</room>
     <room>rooms\rm_steps_down</room>
     <room>rooms\rm_spider</room>
+    <room>rooms\room5</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
