@@ -113,6 +113,48 @@ y += vspd
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="obj_enemy">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>var above_enemy = y &lt; other.y+vspd;
+var falling = vspd &gt; 0;
+
+if(above_enemy &amp;&amp; falling){
+    if(!place_meeting(x, yprevious, obj_solid)){
+        y=yprevious;
+    }
+    
+    while(!place_meeting(x,y+1,other)){
+        y++;
+    }
+    //kill the enemy
+    with (other){
+        instance_destroy();
+    }
+    
+    vspd = -14;
+} else {
+    room_restart();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="obj_goal">
       <action>
         <libid>1</libid>
